@@ -30,6 +30,10 @@ app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000;
 
+app.get("/", (req, res) => {
+  res.send("Welcome to the Book Rental API");
+});
+
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => {
