@@ -11,7 +11,7 @@ export const sendPasswordResetEmail = async (email, resetUrl) => {
       Messages: [
         {
           From: {
-            Email: "oloogeorge633@gmail.com",
+            Email: "support@booksarc.co.ke",
             Name: "BooksArc",
           },
           To: [{ Email: email }],
