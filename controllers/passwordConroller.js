@@ -17,7 +17,7 @@ export const requestPasswordReset = async (req, res) => {
     await user.save();
 
     // send email
-    const resetUrl = `htpps://booksarc.co.ke/reset-password/${token}`;
+    const resetUrl = `https://booksarc.co.ke/reset-password/${token}`;
     await sendPasswordResetEmail(user.email, resetUrl);
 
     res.json({ message: "Password reset email sent" });
