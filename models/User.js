@@ -31,6 +31,10 @@ const userSchema = new mongoose.Schema(
     location: { type: String, required: true },
     role: { type: String, enum: ["user", "admin"], default: "user" },
     subscription: subscriptionSchema,
+
+    // 🔑 Password Reset
+    resetPasswordToken: String,
+    resetPasswordExpires: Date,
   },
   { timestamps: true }
 );

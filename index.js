@@ -9,6 +9,7 @@ import hireRoutes from "./routes/hireRoutes.js";
 import subscriptionRoutes from "./routes/subscriptionRoutes.js";
 import adminRoutes from "./routes/adminRoutes.js";
 import userRoutes from "./routes/userRoutes.js";
+import passwordRoutes from "./routes/passwordRoutes.js";
 
 import { errorHandler } from "./middlewares/errorMiddleware.js";
 
@@ -26,6 +27,7 @@ app.use("/api/hire", hireRoutes);
 app.use("/api/subscriptions", subscriptionRoutes);
 app.use("/api/admin", adminRoutes);
 app.use("/api/user", userRoutes);
+app.use("/api/password", passwordRoutes);
 
 // Error Middleware
 app.use(errorHandler);
