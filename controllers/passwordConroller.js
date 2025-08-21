@@ -13,7 +13,7 @@ export const requestPasswordReset = async (req, res) => {
     // generate token
     const token = crypto.randomBytes(32).toString("hex");
     user.resetPasswordToken = token;
-    user.resetPasswordExpires = Date.now() + 3600000; // 1 hour
+    user.resetPasswordExpires = Date.now() + 900000; // 0.25 hour, 15 minutes
     await user.save();
 
     // send email

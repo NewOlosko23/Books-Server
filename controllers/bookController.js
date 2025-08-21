@@ -3,7 +3,7 @@ import Book from "../models/Book.js";
 // Add a book
 export const addBook = async (req, res, next) => {
   try {
-    const { title, author, description, coverImage, location } = req.body;
+    const { title, author, description, coverImage, location, category } = req.body;
     const userId = req.user.id;
 
     if (!title || !author || !location) {
